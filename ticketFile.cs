@@ -25,7 +25,14 @@ public class ticketFile {
             sr.Close();
             
     }
+        public void AddTicket(Ticket ticket){
+            StreamWriter sw = new StreamWriter(filePath, true);
+            ticket.ticketID = Tickets.Max(t => t.ticketID) + 1;
+            sw.WriteLine($"{ticket.ticketID},{ticket.summary},{ticket.status},{ticket.submitter},{ticket.assigned},{ticket.watching}");
+            sw.Close();
+            Tickets.Add(ticket);
+            
+        }
 
-    
 
 }
