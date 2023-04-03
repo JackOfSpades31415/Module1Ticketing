@@ -9,4 +9,9 @@ public class Ticket
     public string watching {get; set;}
 
 
+    public string Display()
+    {
+      return $"{ticketID}, {summary}, {status}, {priority}, {submitter}, {assigned}, {watching}";
+    }
+
 }
