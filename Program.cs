@@ -7,6 +7,8 @@ var logger = LogManager.LoadConfiguration(path).GetCurrentClassLogger();
 
 string ticketFilePath = Directory.GetCurrentDirectory() + "\\Ticket.csv";
 string prompt = "";
+logger.Info("Program on");
+ticketFile ticketFile = new ticketFile(ticketFilePath);
 do{
 Console.WriteLine("[1] Display ticket list and information");
 Console.WriteLine("[2] Create new ticket.");
